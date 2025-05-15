@@ -14,8 +14,6 @@ html {
   position: absolute;
   top: 5.3125rem;
   z-index: -1;
-  background-image: url("/assets/banner-landingpage.jpg");
-  background-size: contain;
   width: 100%;
 }
 
@@ -202,9 +200,12 @@ header .icon {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 43.5rem;
-  margin: 10.625rem 0 0 6.25rem;
-  width: 50rem;
+  /* height: 43.5rem; */
+  /* margin: 10.625rem 0 0 6.25rem; */
+  padding: 170px 0 170px 100px;
+  background-image: url("/assets/banner-landingpage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
@@ -275,12 +276,11 @@ header .icon {
 
 @media only screen and (max-width: 760px) {
 
-  #sign-up-section {
-    /* align-items: center;
-    justify-content: center; */
+  /* #sign-up-section {
     height: 28rem;
-    width: 95%;
-  }
+    margin: 0;
+    width: 0;
+  } */
 
   #sign-up-cta {
     position: static;
