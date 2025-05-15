@@ -14,7 +14,7 @@ html {
   position: absolute;
   top: 5.3125rem;
   z-index: -1;
-  background-image: url(/assets/banner-landingpage.jpg);
+  background-image: url("/assets/banner-landingpage.jpg");
   background-size: contain;
   width: 100%;
 }
@@ -38,8 +38,18 @@ html {
 }
 
 @media only screen and (max-width: 760px) {
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .main-content {
-    top: 2.5625rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
@@ -94,17 +104,39 @@ header .icon {
 
 .mobile {
   display: none;
-} 
+}
+
+.tablet {
+  display: none;
+}
+
+/* Tablet Button CSS */
+/* .tablet .button {
+  background-color: #9dc20a;
+  padding: .5rem 1rem;
+} */
 
 /* Header Tablet */
 @media only screen and (max-width: 760px) {
 
+  header .desktop {
+    display: none;
+  }
+
+  header .content .tablet {
+    display: flex;
+    align-items: center;
+  }
+
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     position: fixed;
     width: 100%;
     border-bottom: solid 1px #c6c1c1;
     background-color: white;
-    height: 85px;
+    /* height: 85px; */
   }
 
   header .content {
@@ -117,7 +149,7 @@ header .icon {
   header .logo {
     flex: 1;
     font-family: "Roboto Mono";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #4A4A4A;
   }
 
@@ -130,7 +162,7 @@ header .icon {
   }
 
   nav li {
-    padding-left: 3.5rem;
+    padding-left: 2.5rem;
 
   }
 
@@ -145,13 +177,20 @@ header .icon {
     width: 1rem;
     padding-left: .75rem;
   }
+
+  .tablet .button {
+  background-color: #9dc20a;
+  padding: .5rem 1rem;
+}
 }
 
 /* Header Mobile */
 @media only screen and (max-width: 600px) {
+  
   .mobile {
     display: block;
   }
+
   .desktop {
     display: none;
   }
@@ -235,10 +274,12 @@ header .icon {
 }
 
 @media only screen and (max-width: 760px) {
+
   #sign-up-section {
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     height: 28rem;
+    width: 95%;
   }
 
   #sign-up-cta {
@@ -251,6 +292,8 @@ header .icon {
 
   #sign-up-cta .content {
     margin-top: 0;
+    display: flex;
+    justify-content: center;
   }
 
   #sign-up-cta .email {
